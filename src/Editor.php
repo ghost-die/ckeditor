@@ -10,7 +10,7 @@ class Editor extends Textarea
 
     protected static $js = [
 	    'vendor/ghost/ckeditor/ckeditor.js',
-	    'vendor/ghost/ckeditor/translations/zh-cn.js',
+//	    'vendor/ghost/ckeditor/translations/zh-cn.js',
     ];
 
     public function render()

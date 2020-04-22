@@ -30,6 +30,9 @@ class CKEditorServiceProvider extends ServiceProvider
         
 	    Admin::booting(function () {
 		    Form::extend('editor', Editor::class);
+		    $config = (array) CKEditor::config('config');
+		    if (empty($config['language'])) $config['language']='zh-cn';
+		    Admin::js('vendor/ghost/ckeditor/translations/'.$config['language'].'.js');
 	    });
     }
 }
